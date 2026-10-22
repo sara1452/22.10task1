@@ -45,6 +45,24 @@ function summaryStats(arrList) {
     })
     return obj
 }
-console.log(summaryStats([["tgrefa", 7, 8],[2,5,6,"dfs"]]))
+console.log(summaryStats([["tgrefa", 7, 8], [2, 5, 6, "dfs"]]))
 //5
-function
+function safeCalculator(a, b, operation) {
+    if (typeof a !== typeof b) {
+        throw new error("error")
+        return
+    }
+    if (operation == "add")
+        return a + b
+    else if (operation == "sub")
+        return a - b
+    else if (operation == "mul")
+        return a * b
+    else if (operation == "div")
+        return a / b
+}
+console.log(
+    safeCalculator(1, 2, "add"),
+    safeCalculator(1, 2, "sub"),
+    safeCalculator(1, 2, "mul"),
+    safeCalculator(1, 2, "div"))
